@@ -1,4 +1,4 @@
-using Swing::Menus::MenuItem
+using Menus::MenuItem
 
 type JMenu = "JMenu"
 
