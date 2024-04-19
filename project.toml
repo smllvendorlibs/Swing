@@ -1,7 +1,9 @@
 
 [project]
 name = "Swing"
-version = "0.0.1"
+version = "0.1.0"
 authors = ["You"]
 edition = "2024"
+
+[depends]
 
