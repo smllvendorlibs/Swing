@@ -1,4 +1,4 @@
-using Menus::Menu
+using Swing::Menus::Menu
 
 type JMenuBar = "JMenuBar"
 

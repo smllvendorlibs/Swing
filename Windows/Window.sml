@@ -1,4 +1,4 @@
-using Menus::MenuBar
+using Swing::Menus::MenuBar
 
 type JFrame = "JFrame"
 
