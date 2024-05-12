@@ -5,5 +5,8 @@ version = "0.1.0"
 authors = ["You"]
 edition = "2024"
 
-[depends]
+[imports]
+Swing = "javax.swing.*"
+Events = "java.awt.event.*"
+AWT = "java.awt.*"
 
