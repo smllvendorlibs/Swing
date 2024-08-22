@@ -10,9 +10,9 @@ fn menubar_new(): JMenuBar => {
   menubar
 }
 
-fn menubar_add_menu(bar: JMenuBar, menu: JMenu): Unit => {
+fn menubar_add_menu(bar: JMenuBar, menu: JMenu): JMenuBar => {
   java {
     "bar.add(menu);"
   }
-  ()
+  bar
 }

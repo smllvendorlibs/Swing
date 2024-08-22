@@ -9,7 +9,7 @@ fn menuitem_new(title: String): JMenuItem => {
   menuitem
 }
 
-fn menuitem_set_onclick(item: JMenuItem, callback: fn(): Unit): Unit => {
+fn menuitem_set_onclick(item: JMenuItem, callback: fn(): Unit): JMenuItem => {
   java {
     "item.addActionListener(new ActionListener() {"
     "   @Override"
@@ -18,6 +18,6 @@ fn menuitem_set_onclick(item: JMenuItem, callback: fn(): Unit): Unit => {
     "   }"
     "});"
   }
-  ()
+  item
 } 
 

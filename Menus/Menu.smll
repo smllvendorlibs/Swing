@@ -10,18 +10,18 @@ fn menu_new(title: String): JMenu => {
   menu
 }
 
-fn menu_add_menuitem(menu: JMenu, item: JMenuItem): Unit => {
+fn menu_add_menuitem(menu: JMenu, item: JMenuItem): JMenu => {
   java {
     "menu.add(item);"
   }
-  ()
+  menu
 }
 
 
-fn menu_add_menu(menu: JMenu, other: JMenu): Unit => {
+fn menu_add_menu(menu: JMenu, other: JMenu): JMenu => {
   java {
     "menu.add(other);"
   }
-  ()
+  menu
 }
 

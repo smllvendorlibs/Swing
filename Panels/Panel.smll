@@ -9,9 +9,9 @@ fn panel_new(): JPanel => {
   panel
 }
 
-fn panel_add(panel: JPanel, child: Any): Unit => {
+fn panel_add(panel: JPanel, child: Any): JPanel => {
   java {
     "panel.add((Component) child);"
   }
-  ()
+  panel
 }
