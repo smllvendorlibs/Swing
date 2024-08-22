@@ -1,5 +1,5 @@
 
-fun dialog_input_show(message: String): String => {
+fn dialog_input_show(message: String): String => {
   val str = ""
   java {
     "str = JOptionPane.showInputDialog(null, message);"
@@ -7,7 +7,7 @@ fun dialog_input_show(message: String): String => {
   str
 }
 
-fun dialog_message_show(message: String): Unit => {
+fn dialog_message_show(message: String): Unit => {
   java {
     "JOptionPane.showMessageDialog(null, message);"
   }
@@ -16,7 +16,7 @@ fun dialog_message_show(message: String): Unit => {
 
 enum DialogChoice = Yes | No | Cancel
 
-fun dialog_yesno_show(message: String): DialogChoice => {
+fn dialog_yesno_show(message: String): DialogChoice => {
   val result = -1 
   java {
     " result = JOptionPane.showConfirmDialog(null, message);"
@@ -36,7 +36,7 @@ enum DialogIcon =
   | Question
   | Plain
 
-fun dialog_message_type_code(msg: DialogIcon): Int => match msg {
+fn dialog_message_type_code(msg: DialogIcon): Int => match msg {
   DialogIcon.Error -> 0
   DialogIcon.Information -> 1
   DialogIcon.Warning -> 2
@@ -44,7 +44,7 @@ fun dialog_message_type_code(msg: DialogIcon): Int => match msg {
   _ -> 4
 }
 
-fun dialog_message_with_title_and_icon_show(message: String, title: String, icon: DialogIcon): Unit => {
+fn dialog_message_with_title_and_icon_show(message: String, title: String, icon: DialogIcon): Unit => {
   val code = dialog_message_type_code(icon)
   java {
     "JOptionPane.showMessageDialog(null, message, title, code);"

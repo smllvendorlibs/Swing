@@ -1,7 +1,7 @@
 
 type JButton = "JButton"
 
-fun button_new(text: String): JButton => {
+fn button_new(text: String): JButton => {
   val btn = null of JButton
   java {
     "btn = new JButton(text);"
@@ -9,7 +9,7 @@ fun button_new(text: String): JButton => {
   btn
 }
 
-fun button_set_onclick(btn: JButton, callback: fn(): Unit): Unit => {
+fn button_set_onclick(btn: JButton, callback: fn(): Unit): Unit => {
   val msg = "clicked!!!!" 
   java {
     "btn.addActionListener(new ActionListener() {"

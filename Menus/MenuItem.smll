@@ -1,7 +1,7 @@
 
 type JMenuItem = "JMenuItem"
 
-fun menuitem_new(title: String): JMenuItem => {
+fn menuitem_new(title: String): JMenuItem => {
   val menuitem = null of JMenuItem
   java {
     "menuitem = new JMenuItem(title);"
@@ -9,7 +9,7 @@ fun menuitem_new(title: String): JMenuItem => {
   menuitem
 }
 
-fun menuitem_set_onclick(item: JMenuItem, callback: fn(): Unit): Unit => {
+fn menuitem_set_onclick(item: JMenuItem, callback: fn(): Unit): Unit => {
   java {
     "item.addActionListener(new ActionListener() {"
     "   @Override"

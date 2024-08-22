@@ -1,8 +1,8 @@
-using Swing::Menus::MenuBar
+import Swing::Menus::MenuBar
 
 type JFrame = "JFrame"
 
-fun window_new(title: String): JFrame => {
+fn window_new(title: String): JFrame => {
   val frame = null of JFrame
   java {
     "frame = new JFrame(title);"
@@ -10,28 +10,28 @@ fun window_new(title: String): JFrame => {
   frame
 }
 
-fun window_set_size(window: JFrame, width: Int, height: Int): Unit => {
+fn window_set_size(window: JFrame, width: Int, height: Int): Unit => {
   java {
     "window.setSize(width, height);"
   }
   ()
 }
 
-fun window_set_visible(window: JFrame, toggle: Bool): Unit => {
+fn window_set_visible(window: JFrame, toggle: Bool): Unit => {
   java {
     "window.setVisible(toggle);"
   }
   ()
 }
 
-fun window_add(window: JFrame, child: Any): Unit => {
+fn window_add(window: JFrame, child: Any): Unit => {
   java {
     "window.add((Component) child);"
   }
   ()
 }
 
-fun window_pack(window: JFrame): Unit => {
+fn window_pack(window: JFrame): Unit => {
   java {
     "window.pack();"
   }

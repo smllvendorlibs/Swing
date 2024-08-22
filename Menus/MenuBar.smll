@@ -1,8 +1,8 @@
-using Swing::Menus::Menu
+import Swing::Menus::Menu
 
 type JMenuBar = "JMenuBar"
 
-fun menubar_new(): JMenuBar => {
+fn menubar_new(): JMenuBar => {
   val menubar = null of JMenuBar
   java {
     "menubar = new JMenuBar();"
@@ -10,7 +10,7 @@ fun menubar_new(): JMenuBar => {
   menubar
 }
 
-fun menubar_add_menu(bar: JMenuBar, menu: JMenu): Unit => {
+fn menubar_add_menu(bar: JMenuBar, menu: JMenu): Unit => {
   java {
     "bar.add(menu);"
   }
