@@ -15,3 +15,11 @@ fn jbutton_onclick(btn: JButton, fx: fn(): Unit): Unit => {
   }
   ()
 }
+
+fn jbutton_set_text(btn: JButton, text: String): JButton => {
+  java {
+    "btn.setText(text);"
+  }
+  btn
+}
+
