@@ -1,0 +1,73 @@
+
+type Component = "java.awt.Component"
+
+fn component_set_enabled(comp: Component, state: Bool): Component => {
+  java {
+    "comp.setEnabled(state);"
+  }
+  comp
+}
+
+fn component_set_visible(comp: Component, state: Bool): Component => {
+  java {
+    "comp.setVisible(state);"
+  }
+  comp
+}
+
+fn component_set_location(comp: Component, x: Int, y: Int): Component => {
+  java {
+    "comp.setLocation(x, y);"
+  }
+  comp
+}
+
+fn component_set_size(comp: Component, width: Int, height: Int): Component => {
+  java {
+    "comp.setSize(width, height);"
+  }
+  comp
+}
+
+fn component_is_enabled(comp: Component): Bool => {
+  val condition = false
+  java {
+    "condition = comp.isEnabled();"
+  }
+  condition
+}
+
+fn component_is_focusable(comp: Component): Bool => {
+  val condition = false
+  java {
+    "condition = comp.isFocusable();"
+  }
+  condition
+}
+
+fn component_is_opaque(comp: Component): Bool => {
+  val condition = false
+  java {
+    "condition = comp.isOpaque();"
+  }
+  condition
+}
+
+fn component_is_showing(comp: Component): Bool => {
+  val condition = false
+  java {
+    "condition = comp.isShowing();"
+  }
+  condition
+}
+
+fn component_is_valid(comp: Component): Bool => {
+  val condition = false
+  java {
+    "condition = comp.isValid();"
+  }
+  condition
+}
+
+
+

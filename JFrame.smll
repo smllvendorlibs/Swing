@@ -1,0 +1,65 @@
+
+import Swing::Container
+
+type JFrame = "javax.swing.JFrame"
+
+fn jframe_new(title: String): JFrame => {
+  val frame = null of JFrame
+  java {
+    "frame = new javax.swing.JFrame(title);"
+  }
+  frame
+}
+
+fn jframe_set_size(frame: JFrame, width: Int, height: Int): JFrame => {
+  java {
+    "frame.setSize(width, height);"
+  }
+  frame
+}
+
+fn jframe_remove(parent: JFrame, child: Container): JFrame => {
+  java {
+    "parent.remove(child);"
+  }
+  parent
+}
+
+fn jframe_dispose_on_close(): Int => {
+  val n = 0
+  java {
+    "n = javax.swing.JFrame.DISPOSE_ON_CLOSE;"
+  }
+  n
+}
+
+fn jframe_do_nothing_on_close(): Int => {
+  val n = 0
+  java {
+    "n = javax.swing.JFrame.DO_NOTHING_ON_CLOSE;"
+  }
+  n
+}
+
+fn jframe_exit_on_close(): Int => {
+  val n = 0
+  java {
+    "n = javax.swing.JFrame.EXIT_ON_CLOSE;"
+  }
+  n
+}
+
+fn jframe_hide_on_close(): Int => {
+  val n = 0
+  java {
+    "n = javax.swing.JFrame.HIDE_ON_CLOSE;"
+  }
+  n
+}
+
+fn jframe_set_closing_operation(parent: JFrame, operation: Int): JFrame => {
+  java {
+    "parent.setDefaultCloseOperation(operation);"
+  }
+  parent
+}

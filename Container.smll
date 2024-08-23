@@ -1,0 +1,44 @@
+
+import Swing::Component
+
+type Container = "java.awt.Container"
+
+fn container_add(parent: Container, child: Component): Container => {
+  java {
+    "parent.add(child);"
+  }
+  parent
+}
+
+fn container_add_at(parent: Container, child: Component, index: Int): Container => {
+  java {
+    "parent.add(child, index);"
+  }
+  parent
+}
+
+
+fn container_remove(parent: Container, child: Component): Container => {
+  java {
+    "parent.remove(child);"
+  }
+  parent
+}
+
+fn container_remove_all(parent: Container): Container => {
+  java {
+    "parent.removeAll();"
+  }
+  parent
+}
+
+fn container_count_components(parent: Container): Int => {
+  val count = 0
+  java {
+    "count = parent.getComponentCount();"
+  }
+  count
+}
+
+
+

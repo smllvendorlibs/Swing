@@ -1,0 +1,20 @@
+
+type JPanel = "javax.swing.JPanel"
+
+fn jpanel_new(): JPanel => {
+  val panel = null of JPanel
+  java {
+    "panel = new javax.swing.JPanel();"
+  }
+  panel
+}
+
+fn jpanel_ui_id(panel: JPanel): String => {
+  val id = null of String
+  java {
+    "id = panel.getUIClassID();"
+  }
+  id
+}
+
+

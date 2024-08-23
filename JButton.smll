@@ -1,0 +1,17 @@
+
+type JButton = "javax.swing.JButton"
+
+fn jbutton_new(text: String): JButton => {
+  val btn = null of JButton
+  java {
+    "btn = new javax.swing.JButton(text);"
+  }
+  btn
+}
+
+fn jbutton_onclick(btn: JButton, fx: fn(): Unit): Unit => {
+  java {
+    "btn.addActionListener(action -> fx.apply());"
+  }
+  ()
+}
